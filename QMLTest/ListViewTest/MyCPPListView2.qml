@@ -3,7 +3,6 @@ import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.0
 import chang.qtexample 1.0
 
-
 Rectangle {
     width: 200
     height: 400
@@ -14,30 +13,29 @@ Rectangle {
             width: ListView.view.width
             height:40
 
-            color: ListView.isCurrentItem ? "yellow" : model.display
+            color: ListView.isCurrentItem ? "yellow" : model.name
 
             Text {
-                width: 140
+                width: parent.width
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: parent.left
-                text: " Color: " + model.display
-            }
-
-            Button {
-                width: 60
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.right: parent.right
-                text: "Press"
+                text: model.name + ': hsv(' +
+                      Number(model.hue).toFixed(2) + ',' +
+                      Number(model.saturation).toFixed() + ',' +
+                      Number(model.brightness).toFixed() + ')'
 
             }
+
+
         }
     }
 
     ListView {
         id: view
         anchors.fill: parent
-        model: DataEntryModel {}
+        model: RoleEntryModel {}
         delegate: colorDelegate
+        focus: true
     }
 
 }

@@ -6,5 +6,12 @@
         <file>qtquickcontrols2.conf</file>
         <file>MyListView.qml</file>
         <file>MyCPPListView.qml</file>
+        <file>MyCPPListView2.qml</file>
+        <file>MyDynamicListView.qml</file>
+        <file>Background.qml</file>
+        <file>ListDelegate.qml</file>
+        <file>ListHighlight.qml</file>
+        <file>TextEntry.qml</file>
+        <file>remove.png</file>
     </qresource>
 </RCC>

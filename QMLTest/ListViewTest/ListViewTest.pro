@@ -3,7 +3,9 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    DataEntryModel.cpp
+    DataEntryModel.cpp \
+    RoleEntryModel.cpp \
+    DynamicEntryModel.cpp
 
 RESOURCES += qml.qrc
 
@@ -30,4 +32,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    DataEntryModel.h
+    DataEntryModel.h \
+    RoleEntryModel.h \
+    DynamicEntryModel.h

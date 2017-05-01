@@ -8,10 +8,20 @@ ApplicationWindow {
     height: 500
     title: qsTr("Hello World")
 
-    MyCPPListView{
-        height: 200
-    }
+    Row {
+//        MyCPPListView{
+//            height: 200
+//        }
 
+        MyCPPListView2{
+            height: 200
+        }
+
+//        MyDynamicListView {
+
+//        }
+
+    }
 //   MyListView {
 
 //   }
